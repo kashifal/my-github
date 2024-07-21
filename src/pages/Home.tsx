@@ -128,29 +128,44 @@ function Home() {
                 </div>
               </div>
             </div>
+
             <div className="mx-auto flex lg:flex-row flex-col max-w-6xl items-center justify-between lg:gap-4 gap-12 md:pb-60 sm:pb-20 pb-10 pt-28">
               <div className="lg:w-1/2">
-                <h1 className="font-[IBM Plex Sans,sans-serif] sm:text-4xl text-2xl font-semibold tracking-wide text-white">
-                  Consulta Processual
-                </h1>
-                <h2 className="font-[IBM Plex Sans,sans-serif] leading-widest py-2 text-[2rem] font-[700] tracking-wide text-white">
-                  Economize tempo! <br className="hidden lg:flex" />
-                  Tenha a cópia integral <br className="hidden lg:flex" />
-                  dos seus processos em <br className="hidden lg:flex" />
-                  poucos cliques
-                </h2>
-                <p className="text-xl font-semibold text-white">
-                  Acesso aos principais tribunais do Brasil
-                </p>
+                <AnimatedComponent
+                  animationType="animateLeft"
+                  duration={1}
+                  delay={0.5}
+                >
+                  <h1 className="font-[IBM Plex Sans,sans-serif] sm:text-4xl text-2xl font-semibold tracking-wide text-white">
+                    Consulta Processual
+                  </h1>
+                  <h2 className="font-[IBM Plex Sans,sans-serif] leading-widest py-2 text-[2rem] font-[700] tracking-wide text-white">
+                    Economize tempo! <br className="hidden lg:flex" />
+                    Tenha a cópia integral <br className="hidden lg:flex" />
+                    dos seus processos em <br className="hidden lg:flex" />
+                    poucos cliques
+                  </h2>
+                  <p className="text-xl font-semibold text-white">
+                    Acesso aos principais tribunais do Brasil
+                  </p>
+                </AnimatedComponent>
               </div>
+
               <div className="lg:w-1/2">
-                <img
-                  src="https://processorapido.com/img/advogado-trabalhando-em-processo.png"
-                  alt=""
-                  className=""
-                />
+                <AnimatedComponent
+                  animationType="animateRight"
+                  duration={1}
+                  delay={0.5}
+                >
+                  <img
+                    src="https://processorapido.com/img/advogado-trabalhando-em-processo.png"
+                    alt=""
+                    className=""
+                  />
+                </AnimatedComponent>
               </div>
             </div>
+
             <div className="">
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB74AAAEnCAMAAAAJjxwTAAAAb1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v0wLRAAAAJHRSTlMAXMXWOi67fvGsG+NqUsyl95+Zk40zKAizFHVC3YdkIUkN6m+WVTL+AAAJ/0lEQVR42uzcW04CQRAF0AIBB0RF8RWI8ZHa/xr90i9iJOBMT/c5m7ipdN8bAK2aXU7zjLqHeQAAZzXfLfI3ohwAhva0XnZZgm4rygHgoNXk9jOL120fAwBat9vkWG1EOQBtWd1lVUQ5ABXbT7NyrwEAlViX8QutN9sAgLH62GbLbgMAxuNxkXx7CQAo2eQqOWz6HABQlNfkTy5WAQCDq6wA1o+rpwCAQayTk3SzAIDezMa7lFag9wCAf/Vc/erKUCYBAOfXdoO7J+sAgPOYJH26CwA4wVyNeyCbAIDjvSTH8x4OwEAuk3IsAgB+dZ0UyVQbAIe8XSRl2wUA/JglY3ETABDLZHTmAUCzHN1jFgC0x9FdgWUA0Ix9Uo99AFC9RVKfAKBa70m97gOA6ji6W/DF3h2kNBAFQQBtgyFKVFAcRDRCsO9/Rl24UVEnJmG6M+9d4sPvokoeHeB0qFGbk4sAoL1FMj+bAKArA92zpiEdoJ+bBGE2gD5eEiyNAjRiMYxv1gFAWS7daHUBaGVI8IIDNLJNGGcbAFTg1s1uhgBgd/Y+mdpZADCNTcL/rQKAEUTMKeY2APiZiDlVLQKAo3tIOLDLAOALEXMaeAoAPoiY00gAcFirhON7DgBEzOnnNQDY1zLhTz7RAeoQMWcsLzhADSLmTOsuABAxp59lADDOVUIdAYAfc/pRqQrwm/OEmkyLArh201EA8NljQn33AYAyVPoJAN6tE1oZAmDerpM39u5lmQEgCgLo9abiEURKLCj0/3+jhRVloyohd+acn+jF3J6mIYfowMROA20VwIReAs1ZJQMmswoMoQBmsQyMY1MAwzsIjOaiAEZ2GBhTAYzpJDCyqwIYzV1geIsCGEhgFgUwhMvAVCyaAO0dBeazLIC21oFpFUBHZkiYXQE08xRAgAOd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"
